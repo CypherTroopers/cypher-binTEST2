@@ -11,58 +11,72 @@ If no `POST, CURL, GET` or other RPC requests are sent to this node, the RPC por
 
 
 cd /usr/local/src
+
 ↓
 
 
 wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2u.tar.gz
+
 ↓
 
 
 tar -xvzf openssl-1.0.2u.tar.gz
+
 ↓
 
 
 cd openssl-1.0.2u
+
 ↓
 
 
 ./config --prefix=/usr/local/openssl-1.0.2 shared
+
 ↓
 
 
 make -j$(nproc)
+
 ↓
 
 
 sudo make install
+
 ↓
 
 
 export LD_LIBRARY_PATH=/usr/local/openssl-1.0.2/lib:$LD_LIBRARY_PATH
+
 ↓
 
 
 echo 'export LD_LIBRARY_PATH=/usr/local/openssl-1.0.2/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+
 ↓
 
 
 source ~/.bashrc
+
 ↓
 
 
 sudo cp /usr/local/openssl-1.0.2/lib/libcrypto.so.1.0.0 /lib/x86_64-linux-gnu/
+
 ↓
 
 
 sudo ldconfig
+
 ↓
 
 
 git clone https://github.com/CypherTroopers/cypher-binTEST2.git
+
 ↓
 
 
 cd cypher-binTEST2
+
 ↓
 
 
